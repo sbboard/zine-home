@@ -75,12 +75,15 @@ html body main .halfHolder .half.logo {
   top: 0;
   width: 40%;
 }
+html body main .halfHolder .half.logo img {
+  filter: invert(1);
+}
 html body main .halfHolder .half.card {
   width: 60%;
   right: 0;
   top: 0;
   justify-content: space-between;
-  -webkit-text-stroke: 3px;
+  -webkit-text-stroke: 2px;
   -webkit-text-stroke-color: black;
   color: white;
 }
@@ -110,8 +113,10 @@ html body main .halfHolder .half.card h3, html body main .halfHolder .half.card 
 html body main .halfHolder .half.card .cardHolder {
   display: block;
   position: relative;
+  margin-left: 4.5em;
   perspective: 500px;
   max-height: calc(100vh - 21em);
+  filter: drop-shadow(2px 4px 6px black);
 }
 html body main .halfHolder .half.card .cardHolder img {
   border-radius: 0.8em;
