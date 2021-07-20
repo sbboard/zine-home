@@ -1,0 +1,150 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html body main {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  font-family: "Fredoka One", cursive;
+  background-size: cover;
+}
+html body main .halfHolder {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  display: block;
+}
+html body main .halfHolder .half {
+  height: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+html body main .halfHolder .half img {
+  max-width: 100%;
+  max-height: 100%;
+}
+html body main .halfHolder .half.logo {
+  left: 0;
+  top: 0;
+  width: 40%;
+}
+html body main .halfHolder .half.card {
+  width: 60%;
+  right: 0;
+  top: 0;
+  justify-content: space-between;
+  -webkit-text-stroke: 3px;
+  -webkit-text-stroke-color: black;
+  color: white;
+}
+html body main .halfHolder .half.card #halfs, html body main .halfHolder .half.card #bottomHalf, html body main .halfHolder .half.card #topHalf {
+  width: 100%;
+  text-align: right;
+  margin-right: 1em;
+}
+html body main .halfHolder .half.card #topHalf {
+  margin-top: 1em;
+}
+html body main .halfHolder .half.card #bottomHalf {
+  margin-bottom: 1em;
+}
+html body main .halfHolder .half.card h1 {
+  font-size: 3em;
+  width: 100%;
+}
+html body main .halfHolder .half.card h2 {
+  font-size: 2em;
+}
+html body main .halfHolder .half.card h3, html body main .halfHolder .half.card p {
+  font-size: 1.5em;
+  -webkit-text-stroke: 2px;
+  -webkit-text-stroke-color: black;
+}
+html body main .halfHolder .half.card .cardHolder {
+  display: block;
+  position: relative;
+  perspective: 500px;
+  max-height: calc(100vh - 21em);
+}
+html body main .halfHolder .half.card .cardHolder img {
+  border-radius: 0.8em;
+  transform-style: preserve-3d;
+  animation: spin 3s infinite alternate ease-in-out;
+  width: auto;
+  height: 100%;
+  border-radius: 20px;
+}
+
+section .wrap {
+  max-width: 1200px;
+  display: block;
+  padding: 1em;
+  margin: 0 auto;
+}
+section.archive {
+  background-color: black;
+  color: white;
+}
+section.archive h2 {
+  font-size: 1.5em;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateY(-20deg);
+    filter: brightness(1.15);
+  }
+  100% {
+    transform: rotateY(20deg);
+    filter: brightness(0.75);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
