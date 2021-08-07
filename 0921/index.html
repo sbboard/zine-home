@@ -9,7 +9,13 @@
   </head>
   <body>
     <main id="theCover">
-      <audio loop autoplay id="coverSong" src="audio.mp3" type="audio/mpeg"></audio>
+      <audio
+        loop
+        autoplay
+        id="coverSong"
+        src="audio.mp3"
+        type="audio/mpeg"
+      ></audio>
       <script>
         let cover = document.getElementById("theCover");
         let coverSong = document.getElementById("coverSong");
@@ -28,7 +34,20 @@
         window.onscroll = checkScroll;
       </script>
     </main>
-    <section>section 1</section>
-    <section>section 2</section>
+    <nav>
+      <div>
+        <span>cover by x, music by y</span>
+        <h2>also inhabiting this world:</h2>
+        <ul>
+          <li><a href="#one">Piece One</a> by <i>Frank Dodo</i></li>
+          <li>
+            <a href="#two">Piece Two</a> by
+            <a href="http://www.gang-fight.com" target="_blank">Gang Fight</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section id="one">section 1</section>
+    <section id="two">section 2</section>
   </body>
 </html>

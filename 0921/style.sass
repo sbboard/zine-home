@@ -1,9 +1,32 @@
 @import reset
-
-body
-    main
-        height: 100vh
-        width: 100%
-        background-color: red
-    section
-        min-height: 100vh
+html
+    scroll-behavior: smooth
+    body
+        main
+            height: 100vh
+            width: 100%
+            background-color: red
+        section
+            min-height: 100vh
+        nav
+            font-family: sans-serif
+            padding: 1em
+            background-color: black
+            color: white
+            div
+                margin-left: 50%
+                span
+                    font-style: italic
+                a
+                    color: white
+                    text-decoration: none
+                    &:hover
+                        text-decoration: underline
+                h2
+                    margin-top: 1rem
+                    font-size: 2em
+                ul
+                    list-style: initial
+                    li
+                        margin: .5em 0 0 1em
+                        width: fit-content

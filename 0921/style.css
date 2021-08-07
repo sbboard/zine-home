@@ -43,13 +43,46 @@ table {
   border-spacing: 0;
 }
 
-body main {
+html {
+  scroll-behavior: smooth;
+}
+html body main {
   height: 100vh;
   width: 100%;
   background-color: red;
 }
-body section {
+html body section {
   min-height: 100vh;
+}
+html body nav {
+  font-family: sans-serif;
+  padding: 1em;
+  background-color: black;
+  color: white;
+}
+html body nav div {
+  margin-left: 50%;
+}
+html body nav div span {
+  font-style: italic;
+}
+html body nav div a {
+  color: white;
+  text-decoration: none;
+}
+html body nav div a:hover {
+  text-decoration: underline;
+}
+html body nav div h2 {
+  margin-top: 1rem;
+  font-size: 2em;
+}
+html body nav div ul {
+  list-style: initial;
+}
+html body nav div ul li {
+  margin: 0.5em 0 0 1em;
+  width: fit-content;
 }
 
 /*# sourceMappingURL=style.css.map */
