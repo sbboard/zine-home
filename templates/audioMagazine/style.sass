@@ -4,6 +4,26 @@ html
     overflow-x: hidden
     body
         background-color: black
+        footer
+            color: white
+            padding: 1em
+            text-transform: lowercase
+            h3
+                display: inline-block
+                font-weight: 800
+            ul
+                display: inline-block
+                li
+                    display: inline-block
+                    &:first-of-type
+                        &:before
+                            content: ""
+                            margin-right: 0
+                    &:before
+                        content: "|"
+                        margin-right: .25em
+                    span
+                        font-style: italic
         main
             height: 100vh
             width: 100%
@@ -34,4 +54,28 @@ html
                     li
                         margin: .5em 0 0 1em
                         width: fit-content
+        #startScreen
+            position: absolute
+            top: 0
+            left: 0
+            height: 100vh
+            width: 100vw
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-direction: column
+            color: white
+            span
+                display: block
+                font-size: 3em
+                cursor: pointer
+                text-transform: uppercase
+                font-style: italic
+            p
+                width: 11em
+                text-align: center
+            h3
+                text-transform: uppercase
+    &.unstarted
+        overflow: hidden
 @import globe
