@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "lite-server",
-    "sass": "sass --watch 0921/style.sass:0921/style.css",
+    "sass": "sass --watch templates/audioMagazine/style.sass:templates/audioMagazine/style.css",
     "minify": "uglifyjs -c -m --keep-fnames -o quizAssets/quiz.min.js -- quizAssets/quiz.js",
     "postcss": "postcss css/style.css --use autoprefixer -r"
   },

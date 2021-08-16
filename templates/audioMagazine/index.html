@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <script src="../../js/musicFadeEngine.js"></script>
+  <body>
+    <!-- COVER-->
+    <main id="theCover">
+      <script>
+        musicFade("theCover", "audio.mp3");
+      </script>
+    </main>
+    <!-- NAV -->
+    <nav>
+      <div>
+        <span>cover by x, music by y</span>
+        <h2>also inhabiting this world:</h2>
+        <ul>
+          <li><a href="#one">Piece One</a> by <i>Frank Dodo</i></li>
+          <li>
+            <a href="#two">Piece Two</a> by
+            <a href="http://www.gang-fight.com" target="_blank">Gang Fight</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- GLOBE-->
+    <section id="one">
+      <img src="projectOne/luigi.png" alt="avatar" id="avatar" />
+      <div id="bg-contain">
+        <video
+          src="projectOne/test.webm"
+          loop
+          autoplay
+          id="city"
+          style="left: 0px"
+        ></video>
+      </div>
+      <div id="instruct">click & hold to walk / tap to run</div>
+      <script>
+        musicFade("one", "song2.mp3");
+      </script>
+      <script src="projectOne/globe.js"></script>
+    </section>
+
+    <!-- COMIC-->
+    <section id="two">
+      section 2
+      <script>
+        musicFade("two", "song3.mp3");
+      </script>
+    </section>
+  </body>
+</html>
