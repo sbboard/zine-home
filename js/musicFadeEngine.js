@@ -1,7 +1,22 @@
+function startEngine() {
+  loadMusic.forEach((e) => {
+    musicFade(e.location, e.mp3);
+  });
+  document.getElementById("root").classList.remove("unstarted");
+  document.getElementById("startScreen").innerHTML = "";
+}
+
+window.location.replace("#");
+
+// slice off the remaining '#' in HTML5:
+if (typeof window.history.replaceState == "function") {
+  history.replaceState({}, "", window.location.href.slice(0, -1));
+}
+
 function musicFade(sceneID, mp3Source) {
   let cover = document.getElementById(sceneID);
   let coverSong = document.createElement("audio");
-  coverSong.src = mp3Source;
+  coverSong.src = `mp3/${mp3Source}`;
   coverSong.type = "audio/mpeg";
   coverSong.volume = 0;
   coverSong.autoplay = true;
@@ -21,4 +36,6 @@ function musicFade(sceneID, mp3Source) {
     }
   }
   window.addEventListener("scroll", checkScroll);
+  window.addEventListener("resize", checkScroll);
+  checkScroll();
 }

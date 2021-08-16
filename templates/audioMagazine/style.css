@@ -50,6 +50,32 @@ html {
 html body {
   background-color: black;
 }
+html body footer {
+  color: white;
+  padding: 1em;
+  text-transform: lowercase;
+}
+html body footer h3 {
+  display: inline-block;
+  font-weight: 800;
+}
+html body footer ul {
+  display: inline-block;
+}
+html body footer ul li {
+  display: inline-block;
+}
+html body footer ul li:first-of-type:before {
+  content: "";
+  margin-right: 0;
+}
+html body footer ul li:before {
+  content: "|";
+  margin-right: 0.25em;
+}
+html body footer ul li span {
+  font-style: italic;
+}
 html body main {
   height: 100vh;
   width: 100%;
@@ -89,6 +115,35 @@ html body nav div ul {
 html body nav div ul li {
   margin: 0.5em 0 0 1em;
   width: fit-content;
+}
+html body #startScreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+}
+html body #startScreen span {
+  display: block;
+  font-size: 3em;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-style: italic;
+}
+html body #startScreen p {
+  width: 11em;
+  text-align: center;
+}
+html body #startScreen h3 {
+  text-transform: uppercase;
+}
+html.unstarted {
+  overflow: hidden;
 }
 
 section#one {
