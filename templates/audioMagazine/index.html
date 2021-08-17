@@ -3,10 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
     <title>Document</title>
     <link rel="stylesheet" href="style.css" />
   </head>
+  <script src="../../js/howler.min.js"></script>
   <script>
     //load music for engine
     const loadMusic = [
@@ -24,9 +28,9 @@
       },
     ];
   </script>
-  <script src="../../js/musicFadeEngine.js"></script>
   <body>
     <!-- COVER-->
+    <div id="testCon"></div>
     <main id="theCover">
       <div id="startScreen">
         <span onclick="startEngine()">begin</span>
@@ -78,5 +82,6 @@
         <li>Austin Hamburg - <span>coding, piano</span></li>
       </ul>
     </footer>
+    <script src="../../js/musicFadeEngine.js"></script>
   </body>
 </html>

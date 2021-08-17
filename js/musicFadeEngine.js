@@ -1,3 +1,11 @@
+let testCon = document.getElementById("testCon");
+
+//cut off anchor tags
+window.location.replace("#");
+if (typeof window.history.replaceState == "function") {
+  history.replaceState({}, "", window.location.href.slice(0, -1));
+}
+
 function startEngine() {
   loadMusic.forEach((e) => {
     musicFade(e.location, e.mp3);
@@ -6,33 +14,28 @@ function startEngine() {
   document.getElementById("startScreen").innerHTML = "";
 }
 
-window.location.replace("#");
-
-// slice off the remaining '#' in HTML5:
-if (typeof window.history.replaceState == "function") {
-  history.replaceState({}, "", window.location.href.slice(0, -1));
-}
-
 function musicFade(sceneID, mp3Source) {
   let cover = document.getElementById(sceneID);
-  let coverSong = document.createElement("audio");
-  coverSong.src = `mp3/${mp3Source}`;
-  coverSong.type = "audio/mpeg";
-  coverSong.volume = 0;
-  coverSong.autoplay = true;
-  coverSong.loop = true;
-  cover.appendChild(coverSong);
+  let coverSong = new Howl({
+    src: [`mp3/${mp3Source}`],
+    volume: 1,
+    autoplay: true,
+    loop: true,
+    html5: true,
+  });
+  coverSong.play();
 
   function checkScroll() {
     let position = cover.getBoundingClientRect();
     if (position.top < window.innerHeight && position.bottom >= 0) {
+      testCon.innerHTML += sceneID;
       if (position.top > 0) {
-        coverSong.volume = 1 - position.top / window.innerHeight;
+        coverSong.volume(1 - position.top / window.innerHeight);
       } else if (position.bottom > 0) {
-        coverSong.volume = position.bottom / window.innerHeight;
+        coverSong.volume(position.bottom / window.innerHeight);
       }
     } else {
-      coverSong.volume = 0;
+      coverSong.volume(0);
     }
   }
   window.addEventListener("scroll", checkScroll);

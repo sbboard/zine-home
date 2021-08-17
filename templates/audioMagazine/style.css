@@ -50,6 +50,14 @@ html {
 html body {
   background-color: black;
 }
+html body #testCon {
+  color: black;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 500;
+}
 html body footer {
   color: white;
   padding: 1em;
