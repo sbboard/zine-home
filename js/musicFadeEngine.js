@@ -11,7 +11,7 @@ function startEngine() {
     musicFade(e.location, e.mp3);
   });
   document.getElementById("root").classList.remove("unstarted");
-  document.getElementById("startScreen").innerHTML = "";
+  document.getElementById("startScreen").classList.add("started");
 }
 
 function musicFade(sceneID, mp3Source) {

@@ -34,7 +34,8 @@ html
         main
             height: 100vh
             width: 100%
-            background-color: red
+            background-image: url(cover/cover.jpg)
+            background-size: cover
         section
             min-height: 100vh
             margin-bottom: 5em
@@ -72,6 +73,12 @@ html
             justify-content: center
             flex-direction: column
             color: white
+            text-shadow: 2px 2px black
+            background-color: rgba(black,.5)
+            transition: opacity .4s
+            &.started
+                opacity: 0
+                pointer-events: none
             span
                 display: block
                 font-size: 3em
