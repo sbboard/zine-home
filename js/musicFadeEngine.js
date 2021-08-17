@@ -1,4 +1,4 @@
-let testCon = document.getElementById("testCon");
+// let testCon = document.getElementById("testCon");
 
 //cut off anchor tags
 window.location.replace("#");
