@@ -28,7 +28,7 @@ function musicFade(sceneID, mp3Source) {
   function checkScroll() {
     let position = cover.getBoundingClientRect();
     if (position.top < window.innerHeight && position.bottom >= 0) {
-      testCon.innerHTML += sceneID;
+      // testCon.innerHTML += sceneID;
       if (position.top > 0) {
         coverSong.volume(1 - position.top / window.innerHeight);
       } else if (position.bottom > 0) {
