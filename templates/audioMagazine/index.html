@@ -16,15 +16,18 @@
     const loadMusic = [
       {
         location: "theCover",
-        mp3: "audio.mp3",
+        mp3: "helloWorld.mp3",
+        loopPoint: 9,
       },
       {
         location: "one",
         mp3: "song2.mp3",
+        loopPoint: null,
       },
       {
         location: "two",
         mp3: "song3.mp3",
+        loopPoint: null,
       },
     ];
   </script>
@@ -60,13 +63,7 @@
     <section id="one">
       <img src="projectOne/luigi.png" alt="avatar" id="avatar" />
       <div id="bg-contain">
-        <video
-          src="projectOne/test.webm"
-          loop
-          autoplay
-          id="city"
-          style="left: 0px"
-        ></video>
+        <video src="projectOne/city.webm" id="city" style="left: 0px"></video>
       </div>
       <div id="instruct">click & hold to walk / tap to run</div>
       <script src="projectOne/globe.js"></script>

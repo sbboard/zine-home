@@ -8,20 +8,28 @@ if (typeof window.history.replaceState == "function") {
 
 function startEngine() {
   loadMusic.forEach((e) => {
-    musicFade(e.location, e.mp3);
+    musicFade(e.location, e.mp3, e.loopPoint);
   });
   document.getElementById("root").classList.remove("unstarted");
   document.getElementById("startScreen").classList.add("started");
 }
 
-function musicFade(sceneID, mp3Source) {
+function musicFade(sceneID, mp3Source, loopTime) {
   let cover = document.getElementById(sceneID);
   let coverSong = new Howl({
     src: [`mp3/${mp3Source}`],
     volume: 1,
     autoplay: true,
-    loop: true,
     html5: true,
+    onend: function () {
+      if (loopTime == null) {
+        this.seek(0);
+        this.play();
+      } else {
+        this.seek(loopTime);
+        this.play();
+      }
+    },
   });
   coverSong.play();
 
