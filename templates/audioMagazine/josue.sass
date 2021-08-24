@@ -1,0 +1,33 @@
+#two
+    transition: font-size .2s
+    min-height: inherit
+    @include mobile
+        font-size: .75em
+    #astroScene
+        width: 812px
+        margin: 0 auto
+        padding: 1em 0
+        max-width: 100%
+        .bigImage
+            img
+                max-width: 100%
+            p
+                font-family: "Courier New", "Lucida Console", monospace
+                text-align: center
+                font-size: 1.5em
+                padding: 0 1em
+        #buttons
+            text-align: center
+            margin: 1em 0
+            .instrument
+                max-width: calc(100%/3 - 3px)
+                display: inline-block
+                cursor: pointer
+                @include mobile
+                    max-width: calc(100%/2 - 2px)
+                img
+                    max-width: 100%
+                    pointer-events: none
+                span
+                    font-family: "Courier New", "Lucida Console", monospace
+                    font-size: 1.25em
