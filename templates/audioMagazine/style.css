@@ -89,11 +89,13 @@ html body main {
   width: 100%;
   background-image: url(cover/cover.jpg);
   background-size: cover;
-  background-position: center top;
+  background-position: center;
+  background-color: black;
+  background-repeat: no-repeat;
 }
 html body section {
   min-height: 100vh;
-  margin-bottom: 5em;
+  min-height: -webkit-fill-available;
   background-color: white;
 }
 html body nav {
@@ -116,7 +118,6 @@ html body nav div a:hover {
   text-decoration: underline;
 }
 html body nav div h2 {
-  margin-top: 1rem;
   font-size: 2em;
 }
 html body nav div ul {
@@ -169,12 +170,21 @@ html body #intro {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  width: 100%;
 }
 html body #intro p {
   font-size: 1.5em;
   padding: 1em;
-  margin: 1em 0 1em auto;
-  width: 33%;
+  margin: 1em 1em 1em auto;
+  width: calc(100% - 4em);
+  max-width: 500px;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+}
+@media (max-width: 650px) {
+  html body #intro p {
+    font-size: 1em;
+  }
 }
 html body #intro.started {
   opacity: 1;

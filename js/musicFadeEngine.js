@@ -1,5 +1,3 @@
-// let testCon = document.getElementById("testCon");
-
 //cut off anchor tags
 window.location.replace("#");
 if (typeof window.history.replaceState == "function") {
@@ -49,5 +47,16 @@ function musicFade(sceneID, mp3Source, loopTime) {
   }
   window.addEventListener("scroll", checkScroll);
   window.addEventListener("resize", checkScroll);
+  document.addEventListener(
+    "visibilitychange",
+    function () {
+      if (document.hidden) {
+        coverSong.pause();
+      } else {
+        coverSong.play();
+      }
+    },
+    false
+  );
   checkScroll();
 }
