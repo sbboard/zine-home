@@ -200,14 +200,24 @@ html.unstarted #theCover {
 }
 
 section#one {
-  background-color: blue;
+  background-color: black;
   height: 100vh;
   position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
-section#one #bg-contain {
+section#one .wrap {
+  width: 100vmin;
+  height: 100vmin;
+  overflow: hidden;
+  position: relative;
+}
+section#one .wrap #bg-contain {
   cursor: pointer;
 }
-section#one #bg-contain video {
+section#one .wrap #bg-contain video {
   height: calc(100vh - 3em);
   width: auto;
   min-width: 100vw;
@@ -216,20 +226,21 @@ section#one #bg-contain video {
   left: 0;
   transition: left 500ms linear;
 }
-section#one img {
+section#one .wrap img {
   position: absolute;
-  bottom: 3em;
-  left: 4em;
-  z-index: 5;
   pointer-events: none;
+  bottom: -2vmin;
+  left: 7vmin;
+  width: 27vmin;
+  z-index: 5;
 }
-section#one img.walk {
+section#one .wrap img.walk {
   animation: walker 225ms linear;
 }
-section#one img.leftMovin {
+section#one .wrap img.leftMovin {
   transform: rotateY(180deg);
 }
-section#one #instruct {
+section#one .wrap #instruct {
   height: 1em;
   padding: 1em;
   position: absolute;
@@ -238,17 +249,20 @@ section#one #instruct {
   color: white;
   text-align: center;
   background-color: black;
+  pointer-events: none;
+  z-index: 300;
+  font-size: 2.5vmin;
 }
 
 @keyframes walker {
   0% {
-    bottom: 3em;
+    bottom: -2vmin;
   }
   50% {
-    bottom: 4em;
+    bottom: -1vmin;
   }
   100% {
-    bottom: 3em;
+    bottom: -2vmin;
   }
 }
 #two {
