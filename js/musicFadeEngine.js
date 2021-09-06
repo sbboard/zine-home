@@ -17,7 +17,7 @@ function musicFade(sceneID, mp3Source, loopTime) {
   let cover = document.getElementById(sceneID);
   let coverSong = new Howl({
     src: [`mp3/${mp3Source}`],
-    volume: 1,
+    volume: 0,
     autoplay: true,
     html5: true,
     onend: function () {
@@ -30,21 +30,20 @@ function musicFade(sceneID, mp3Source, loopTime) {
       }
     },
   });
-  coverSong.play();
 
   function checkScroll() {
     let position = cover.getBoundingClientRect();
     if (position.top < window.innerHeight && position.bottom >= 0) {
-      // testCon.innerHTML += sceneID;
       if (position.top > 0) {
-        coverSong.volume(1 - position.top / window.innerHeight);
+        coverSong.volume((1 - position.top / window.innerHeight)/2);
       } else if (position.bottom > 0) {
-        coverSong.volume(position.bottom / window.innerHeight);
+        coverSong.volume((position.bottom / window.innerHeight)/2);
       }
     } else {
       coverSong.volume(0);
     }
   }
+  setTimeout(checkScroll,100)
   window.addEventListener("scroll", checkScroll);
   window.addEventListener("resize", checkScroll);
   document.addEventListener(
@@ -58,5 +57,4 @@ function musicFade(sceneID, mp3Source, loopTime) {
     },
     false
   );
-  checkScroll();
 }
