@@ -1,52 +1,43 @@
 let globeSection = document.getElementById("one");
 let move = null;
 
-function onLeft(e) {
-  let parentWidth = document.getElementById("one").offsetWidth;
-  let onLeftSide = e.clientX < parentWidth / 2 ? true : false;
-  return onLeftSide;
-}
+let videoElement = document.getElementById("city");
+let walkspeed = 1000;
+const maxLeft = 178;
+let iterationCount = 0;
 
-function leftMove() {
-  document.getElementById("avatar").classList.add("leftMovin");
-  establishWalk();
-  let currentLeft = parseInt(document.getElementById("city").style.left);
-  if (currentLeft < 0) {
-    let newLeft = currentLeft + 100;
-    document.getElementById("city").style.left = newLeft + "px";
+function rightMove() {
+  const clicksToDeath = (videoElement.duration * 1000) / walkspeed;
+  const movePerClick = 178 / clicksToDeath;
+  let newLeft = movePerClick * iterationCount * -1;
+  if (newLeft > maxLeft * -1) {
+    iterationCount++;
+    document.getElementById("city").style.left = newLeft + "vmin";
+    videoElement.play();
+    setTimeout(() => {
+      videoElement.pause();
+    }, walkspeed);
+    establishWalk();
+  } else {
+    document.getElementById("city").style.left = maxLeft * -1 + "vmin";
   }
 }
-function rightMove() {
-  document.getElementById("avatar").classList.remove("leftMovin");
-  establishWalk();
-  let currentLeft = parseInt(document.getElementById("city").style.left);
-  let newLeft = currentLeft - 100;
-  document.getElementById("city").style.left = newLeft + "px";
-}
 
-function establishWalk() {
-  document.getElementById("avatar").classList.add("walk");
-  setTimeout(() => {
-    document.getElementById("avatar").classList.remove("walk");
-  }, 450);
-}
+function establishWalk() {}
 
 globeSection.addEventListener("mousedown", (e) => {
-  if (onLeft(e)) {
-    if (move == null) {
-      leftMove();
-      move = setInterval(leftMove, 500);
-    }
-  } else {
-    if (move == null) {
-      rightMove();
-      move = setInterval(rightMove, 500);
-    }
+  const adjustedWalkSpeed = walkspeed + 10;
+  if (move == null) {
+    rightMove();
+    move = setInterval(rightMove, adjustedWalkSpeed);
   }
 });
 
 globeSection.addEventListener("mouseup", (e) => {
-  document.getElementById("avatar").classList.remove("leftMovin");
   clearInterval(move);
   move = null;
 });
+
+videoElement.onended = () => {
+  console.log("play it");
+};

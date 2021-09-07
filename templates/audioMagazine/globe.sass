@@ -14,8 +14,8 @@ section#one
         #bg-contain
             cursor: pointer
             video
-                height: calc(100vh - 3em)
                 width: auto
+                height: calc(100% - 7.5vmin)
                 min-width: 100vw
                 position: absolute
                 top: 0
@@ -28,8 +28,6 @@ section#one
             left: 7vmin
             width: 27vmin
             z-index: 5
-            &.walk
-                animation: walker 225ms linear
             &.leftMovin
                 transform: rotateY(180deg)
         #instruct
@@ -44,11 +42,3 @@ section#one
             pointer-events: none
             z-index: 300
             font-size: 2.5vmin
-
-@keyframes walker
-    0%
-        bottom: -2vmin
-    50%
-        bottom: -1vmin
-    100%
-        bottom: -2vmin

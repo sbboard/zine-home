@@ -218,8 +218,8 @@ section#one .wrap #bg-contain {
   cursor: pointer;
 }
 section#one .wrap #bg-contain video {
-  height: calc(100vh - 3em);
   width: auto;
+  height: calc(100% - 7.5vmin);
   min-width: 100vw;
   position: absolute;
   top: 0;
@@ -233,9 +233,6 @@ section#one .wrap img {
   left: 7vmin;
   width: 27vmin;
   z-index: 5;
-}
-section#one .wrap img.walk {
-  animation: walker 225ms linear;
 }
 section#one .wrap img.leftMovin {
   transform: rotateY(180deg);
@@ -254,17 +251,6 @@ section#one .wrap #instruct {
   font-size: 2.5vmin;
 }
 
-@keyframes walker {
-  0% {
-    bottom: -2vmin;
-  }
-  50% {
-    bottom: -1vmin;
-  }
-  100% {
-    bottom: -2vmin;
-  }
-}
 #two {
   transition: font-size 0.2s;
   min-height: inherit;
