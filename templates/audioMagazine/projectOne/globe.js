@@ -2,9 +2,9 @@ let globeSection = document.getElementById("one");
 let move = null;
 
 let videoElement = document.getElementById("city");
-let walkspeed = 1000;
+let walkspeed = 500;
 const maxLeft = 178;
-let iterationCount = 0;
+let iterationCount = 1;
 
 function rightMove() {
   const clicksToDeath = (videoElement.duration * 1000) / walkspeed;
@@ -19,7 +19,12 @@ function rightMove() {
     }, walkspeed);
     establishWalk();
   } else {
-    document.getElementById("city").style.left = maxLeft * -1 + "vmin";
+    if (!videoElement.ended) {
+      videoElement.play();
+      videoElement.currentTime = videoElement.duration;
+    } else {
+      document.getElementById("city").style.left = maxLeft * -1 + "vmin";
+    }
   }
 }
 
@@ -40,4 +45,5 @@ globeSection.addEventListener("mouseup", (e) => {
 
 videoElement.onended = () => {
   console.log("play it");
+  document.getElementById("bg-contain").style.cursor = "initial";
 };
