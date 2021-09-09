@@ -21,7 +21,6 @@ function rightMove() {
   } else {
     if (!videoElement.ended) {
       videoElement.play();
-      videoElement.currentTime = videoElement.duration;
     } else {
       document.getElementById("city").style.left = maxLeft * -1 + "vmin";
     }
