@@ -1,6 +1,6 @@
 let globeSection = document.getElementById("one");
 let move = null;
-
+let ended = false;
 let videoElement = document.getElementById("city");
 let walkspeed = 500;
 const maxLeft = 178;
@@ -17,7 +17,6 @@ function rightMove() {
     setTimeout(() => {
       videoElement.pause();
     }, walkspeed);
-    establishWalk();
   } else {
     if (!videoElement.ended) {
       videoElement.play();
@@ -27,17 +26,19 @@ function rightMove() {
   }
 }
 
-function establishWalk() {}
-
 globeSection.addEventListener("mousedown", (e) => {
   const adjustedWalkSpeed = walkspeed + 10;
   if (move == null) {
     rightMove();
+    if (!ended) {
+      document.getElementById("avatar").src = "projectOne/walk.gif";
+    }
     move = setInterval(rightMove, adjustedWalkSpeed);
   }
 });
 
 globeSection.addEventListener("mouseup", (e) => {
+  document.getElementById("avatar").src = "projectOne/idle.gif";
   clearInterval(move);
   move = null;
 });
@@ -45,4 +46,7 @@ globeSection.addEventListener("mouseup", (e) => {
 videoElement.onended = () => {
   console.log("play it");
   document.getElementById("bg-contain").style.cursor = "initial";
+  ended = true;
+
+  document.getElementById("avatar").src = "projectOne/idle.gif";
 };

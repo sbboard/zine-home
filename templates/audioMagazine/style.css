@@ -230,12 +230,15 @@ section#one .wrap img {
   position: absolute;
   pointer-events: none;
   bottom: -2vmin;
+  filter: saturate(1) drop-shadow(0vmin 0vmin 1vmin rgba(0, 0, 0, 0.25)) hue-rotate(-71deg);
   left: 7vmin;
   width: 27vmin;
   z-index: 5;
-}
-section#one .wrap img.leftMovin {
-  transform: rotateY(180deg);
+  image-rendering: optimizeSpeed;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
 }
 section#one .wrap #instruct {
   height: 1em;
