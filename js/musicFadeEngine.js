@@ -35,15 +35,17 @@ function musicFade(sceneID, mp3Source, loopTime) {
     let position = cover.getBoundingClientRect();
     if (position.top < window.innerHeight && position.bottom >= 0) {
       if (position.top > 0) {
-        coverSong.volume((1 - position.top / window.innerHeight)/2);
-      } else if (position.bottom > 0) {
-        coverSong.volume((position.bottom / window.innerHeight)/2);
+        coverSong.volume((1 - position.top / window.innerHeight) / 2);
+      } else if (position.bottom < window.innerHeight) {
+        coverSong.volume(position.bottom / window.innerHeight / 2);
+      } else {
+        coverSong.volume(0.5);
       }
     } else {
       coverSong.volume(0);
     }
   }
-  setTimeout(checkScroll,100)
+  setTimeout(checkScroll, 100);
   window.addEventListener("scroll", checkScroll);
   window.addEventListener("resize", checkScroll);
   document.addEventListener(
