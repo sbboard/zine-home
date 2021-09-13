@@ -178,7 +178,6 @@ html body #intro p {
   margin: 1em 1em 1em auto;
   width: calc(100% - 4em);
   max-width: 500px;
-  background-color: rgba(0, 0, 0, 0.75);
   border-radius: 10px;
 }
 @media (max-width: 650px) {
