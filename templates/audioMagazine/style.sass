@@ -4,13 +4,15 @@
     @media (max-width: #{650px})
         @content
 
+$josueBlack: #141313
+
 html
     scroll-behavior: smooth
     overflow-x: hidden
     body
-        background-color: black
+        background-color: $josueBlack
         #testCon
-            color: black
+            color: $josueBlack
             background-color: white
             position: fixed
             bottom: 0
@@ -20,6 +22,7 @@ html
             color: white
             padding: 1em
             text-transform: lowercase
+            text-align: center
             h3
                 display: inline-block
                 font-weight: 800
@@ -42,7 +45,7 @@ html
             background-image: url(cover/cover.jpg)
             background-size: cover
             background-position: center
-            background-color: black
+            background-color: $josueBlack
             background-repeat: no-repeat
         section
             min-height: 100vh
@@ -51,10 +54,12 @@ html
         nav
             font-family: sans-serif
             padding: 1em
-            background-color: black
+            background-color: $josueBlack
             color: white
             div
-                margin-left: 50%
+                max-width: 730px
+                width: 100%
+                margin: 0 auto
                 span
                     font-style: italic
                 a
