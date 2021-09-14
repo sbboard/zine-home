@@ -25,6 +25,14 @@ instrumentArray.forEach((v, i) => {
       case 0:
         v.children[0].src = `${projPath}${instrument}1${imgType}`;
         sound.src = `${projPath}${soundFile}1.mp3`;
+        sound.volume = 0;
+        let increaseVolume = setInterval(() => {
+          if (sound.volume < 0.95) {
+            sound.volume = sound.volume + 0.05;
+          } else {
+            clearInterval(increaseVolume);
+          }
+        }, 100);
         sound.play();
         break;
       case 1:
