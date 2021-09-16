@@ -8,7 +8,7 @@
     "dev": "lite-server",
     "sass": "sass --watch templates/audioMagazine/style.sass:templates/audioMagazine/style.css",
     "minify": "uglifyjs -c -m --keep-fnames -o quizAssets/quiz.min.js -- quizAssets/quiz.js",
-    "postcss": "postcss css/style.css --use autoprefixer -r"
+    "postcss": "postcss templates/audioMagazine/style.css --use autoprefixer -r"
   },
   "author": "",
   "license": "ISC",
