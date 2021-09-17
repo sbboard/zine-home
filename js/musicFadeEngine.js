@@ -10,6 +10,7 @@ function startEngine() {
   });
   document.getElementById("root").classList.remove("unstarted");
   document.getElementById("startScreen").classList.add("started");
+  document.getElementById("navigation").classList.add("started");
   document.getElementById("intro").classList.add("started");
 }
 
