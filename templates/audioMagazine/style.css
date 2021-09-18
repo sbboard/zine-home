@@ -49,21 +49,11 @@ html {
   overflow-x: hidden;
   font-family: "Montserrat", sans-serif;
 }
-html body {
-  background-color: #141313;
-}
-html body #testCon {
-  color: #141313;
-  background-color: white;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  z-index: 500;
-}
 html body footer {
   color: white;
   padding: 1em;
   text-transform: lowercase;
+  background-color: #141313;
 }
 html body footer h3 {
   display: inline-block;
@@ -98,7 +88,6 @@ html body main {
 html body section {
   min-height: 100vh;
   min-height: -webkit-fill-available;
-  background-color: white;
 }
 html body nav {
   font-family: sans-serif;
@@ -279,6 +268,16 @@ section#one .wrap #instruct {
   pointer-events: none;
   z-index: 4;
   font-size: 2.5vmin;
+}
+
+#halftone {
+  background-image: url(halftone.png);
+  position: absolute;
+  background-size: auto 100%;
+  width: 100%;
+  z-index: -1;
+  height: 36vmin;
+  background-color: white;
 }
 
 #two {
