@@ -54,6 +54,8 @@ html body footer {
   padding: 1em;
   text-transform: lowercase;
   background-color: #141313;
+  user-select: none;
+  text-align: center;
 }
 html body footer h3 {
   display: inline-block;
@@ -92,6 +94,7 @@ html body section {
 html body nav {
   font-family: sans-serif;
   padding: 1em;
+  background: linear-gradient(180deg, black, transparent);
   background-color: #141313;
   color: white;
   position: absolute;
@@ -102,33 +105,28 @@ html body nav {
 html body nav.started {
   bottom: 0;
 }
-html body nav div {
-  max-width: 730px;
-  width: 100%;
-  margin: 0 auto;
-}
-html body nav div span {
-  font-style: italic;
-}
-html body nav div a {
+html body nav .menu-item {
+  border: 1px solid white;
+  display: inline-block;
+  width: 300px;
+  margin-left: 1em;
   color: white;
   text-decoration: none;
+  padding: 0.5em;
 }
-html body nav div a:hover {
-  text-decoration: underline;
+html body nav .menu-item img {
+  width: 100px;
+  height: 100px;
+  float: left;
 }
-html body nav div h2 {
-  font-size: 2em;
+html body nav .menu-item div {
+  margin-left: calc(100px + .5em);
 }
-html body nav div ul {
-  list-style: initial;
-}
-html body nav div ul li {
-  margin: 0.5em 0 0 1em;
-  width: fit-content;
+html body nav .menu-item:first-of-type {
+  margin-left: 0;
 }
 html body #presentedBy {
-  background-color: #141313;
+  background-color: black;
   width: 100%;
   position: absolute;
   top: 0;
@@ -223,6 +221,7 @@ section#one {
   align-items: center;
   display: flex;
   flex-direction: column;
+  user-select: none;
 }
 section#one .wrap {
   width: 100vmin;
@@ -263,9 +262,9 @@ section#one .wrap #instruct {
   bottom: 0;
   width: 100%;
   color: white;
+  user-select: none;
   text-align: center;
   background-color: #141313;
-  pointer-events: none;
   z-index: 4;
   font-size: 2.5vmin;
 }
@@ -306,6 +305,7 @@ section#one .wrap #instruct {
 #two #astroScene #buttons {
   text-align: center;
   margin: 1em 0;
+  user-select: none;
 }
 #two #astroScene #buttons .instrument {
   max-width: calc(100%/3 - 3px);

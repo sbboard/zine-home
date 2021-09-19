@@ -17,6 +17,8 @@ html
             padding: 1em
             text-transform: lowercase
             background-color: $josueBlack
+            user-select: none
+            text-align: center
             h3
                 display: inline-block
                 font-weight: 800
@@ -47,6 +49,7 @@ html
         nav
             font-family: sans-serif
             padding: 1em
+            background: linear-gradient(180deg, black, transparent)
             background-color: $josueBlack
             color: white
             position: absolute
@@ -55,26 +58,24 @@ html
             transition: bottom .5s
             &.started
                 bottom: 0
-            div
-                max-width: 730px
-                width: 100%
-                margin: 0 auto
-                span
-                    font-style: italic
-                a
-                    color: white
-                    text-decoration: none
-                    &:hover
-                        text-decoration: underline
-                h2
-                    font-size: 2em
-                ul
-                    list-style: initial
-                    li
-                        margin: .5em 0 0 1em
-                        width: fit-content
+            .menu-item
+                border: 1px solid white
+                display: inline-block
+                width: 300px
+                margin-left: 1em
+                color: white
+                text-decoration: none
+                padding: .5em
+                img
+                    width: 100px
+                    height: 100px
+                    float: left
+                div
+                    margin-left: calc(100px + .5em)
+                &:first-of-type
+                    margin-left: 0
         #presentedBy
-            background-color: $josueBlack
+            background-color: black
             width: 100%
             position: absolute
             top: 0
