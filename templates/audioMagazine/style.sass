@@ -1,8 +1,15 @@
 @import reset
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat&display=swap')
 
+$tabletWidth: 1030px
+$mobileWidth: 650px
+
+@mixin tablet
+    @media (max-width: #{$tabletWidth})
+        @content
+
 @mixin mobile
-    @media (max-width: #{650px})
+    @media (max-width: #{$mobileWidth})
         @content
 
 $josueBlack: #141313
@@ -53,9 +60,12 @@ html
             background-color: $josueBlack
             color: white
             position: absolute
-            width: 100%
-            bottom: -7em
+            text-align: center
+            width: calc(100% - 2em)
+            bottom: -150px
             transition: bottom .5s
+            @include tablet
+                position: initial
             &.started
                 bottom: 0
             .menu-item
@@ -66,6 +76,11 @@ html
                 color: white
                 text-decoration: none
                 padding: .5em
+                text-align: left
+                @include tablet
+                    width: calc(100% - 1em)
+                    margin-left: 0
+                    margin-bottom: 1em
                 img
                     width: 100px
                     height: 100px
@@ -127,9 +142,9 @@ html
                 font-size: 1.5em
                 padding: 1em
                 width: 50%
+                max-width: 35rem
                 @include mobile
                     font-size: 1em
-
             span
                 font-family: "Anton", sans-serif
                 width: 50%
@@ -137,6 +152,7 @@ html
                 padding: 1rem
                 font-size: 12em
                 word-spacing: 3em
+                max-width: 35rem
                 line-height: 1.2em
             &.started
                 opacity: 1

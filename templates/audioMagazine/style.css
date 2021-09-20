@@ -98,9 +98,15 @@ html body nav {
   background-color: #141313;
   color: white;
   position: absolute;
-  width: 100%;
-  bottom: -7em;
+  text-align: center;
+  width: calc(100% - 2em);
+  bottom: -150px;
   transition: bottom 0.5s;
+}
+@media (max-width: 1030px) {
+  html body nav {
+    position: initial;
+  }
 }
 html body nav.started {
   bottom: 0;
@@ -113,6 +119,14 @@ html body nav .menu-item {
   color: white;
   text-decoration: none;
   padding: 0.5em;
+  text-align: left;
+}
+@media (max-width: 1030px) {
+  html body nav .menu-item {
+    width: calc(100% - 1em);
+    margin-left: 0;
+    margin-bottom: 1em;
+  }
 }
 html body nav .menu-item img {
   width: 100px;
@@ -185,6 +199,7 @@ html body #intro p {
   font-size: 1.5em;
   padding: 1em;
   width: 50%;
+  max-width: 35rem;
 }
 @media (max-width: 650px) {
   html body #intro p {
@@ -198,6 +213,7 @@ html body #intro span {
   padding: 1rem;
   font-size: 12em;
   word-spacing: 3em;
+  max-width: 35rem;
   line-height: 1.2em;
 }
 html body #intro.started {
