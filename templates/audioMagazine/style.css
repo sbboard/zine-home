@@ -241,9 +241,12 @@ section#one {
 }
 section#one .wrap {
   width: 100vmin;
+  max-width: 812px;
   height: 100vmin;
+  max-height: 812px;
   overflow: hidden;
-  position: relative;
+  position: absolute;
+  top: 0;
 }
 section#one .wrap #bg-contain {
   cursor: pointer;
@@ -295,6 +298,23 @@ section#one .wrap #instruct {
   background-color: white;
 }
 
+#fadeToWorld {
+  background: linear-gradient(180deg, white, #141313);
+}
+#fadeToWorld #innerWrap {
+  background: linear-gradient(180deg, white, #261091);
+  width: 100vmin;
+  max-width: 812px;
+  display: block;
+  margin: 0 auto;
+}
+#fadeToWorld #innerWrap p {
+  display: block;
+  font-weight: 800;
+  padding: 1em;
+  color: #FF5EB9;
+}
+
 #two {
   transition: font-size 0.2s;
   min-height: inherit;
@@ -340,6 +360,18 @@ section#one .wrap #instruct {
 #two #astroScene #buttons .instrument span {
   font-family: "Courier New", "Lucida Console", monospace;
   font-size: 1.25em;
+}
+
+#article {
+  border-top: 2px solid black;
+  padding-top: 1em;
+  width: 100%;
+  max-width: 812px;
+  display: block;
+  margin: 0 auto;
+}
+#article p {
+  margin-bottom: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */

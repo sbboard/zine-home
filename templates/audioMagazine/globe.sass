@@ -9,9 +9,12 @@ section#one
     user-select: none
     .wrap
         width: 100vmin
+        max-width: $wrapWidth
         height: 100vmin
+        max-height: $wrapWidth
         overflow: hidden
-        position: relative
+        position: absolute
+        top: 0
         #bg-contain
             cursor: pointer
             video
@@ -55,3 +58,16 @@ section#one
     z-index: -1
     height: 36vmin
     background-color: white
+#fadeToWorld
+    background: linear-gradient(180deg, white, $josueBlack)
+    #innerWrap
+        background: linear-gradient(180deg, white, #261091)
+        width: 100vmin
+        max-width: $wrapWidth
+        display: block
+        margin: 0 auto
+        p
+            display: block
+            font-weight: 800
+            padding: 1em
+            color: #FF5EB9
