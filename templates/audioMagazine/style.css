@@ -195,11 +195,22 @@ html body #intro {
   align-items: center;
   flex-direction: row;
 }
+@media (max-width: 1030px) {
+  html body #intro {
+    flex-direction: column;
+  }
+}
 html body #intro p {
   font-size: 1.5em;
   padding: 1em;
   width: 50%;
   max-width: 35rem;
+}
+@media (max-width: 1030px) {
+  html body #intro p {
+    width: 100%;
+    padding: 0;
+  }
 }
 @media (max-width: 650px) {
   html body #intro p {
@@ -211,10 +222,21 @@ html body #intro span {
   width: 50%;
   word-break: break-all;
   padding: 1rem;
-  font-size: 12em;
+  font-size: 10.6em;
   word-spacing: 3em;
   max-width: 35rem;
   line-height: 1.2em;
+}
+@media (max-width: 1030px) {
+  html body #intro span {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 650px) {
+  html body #intro span {
+    font-size: 31vw;
+  }
 }
 html body #intro.started {
   opacity: 1;
@@ -369,6 +391,7 @@ section#one .wrap #instruct {
   max-width: 812px;
   display: block;
   margin: 0 auto;
+  min-height: 100vh;
 }
 #article p {
   margin-bottom: 1em;

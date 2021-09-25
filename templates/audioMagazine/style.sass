@@ -139,11 +139,16 @@ html
             width: 100%
             align-items: center
             flex-direction: row
+            @include tablet
+                flex-direction: column
             p
                 font-size: 1.5em
                 padding: 1em
                 width: 50%
                 max-width: 35rem
+                @include tablet
+                    width: 100%
+                    padding: 0
                 @include mobile
                     font-size: 1em
             span
@@ -151,10 +156,15 @@ html
                 width: 50%
                 word-break: break-all
                 padding: 1rem
-                font-size: 12em
+                font-size: 10.6em
                 word-spacing: 3em
                 max-width: 35rem
                 line-height: 1.2em
+                @include tablet
+                    width: 100%
+                    padding: 0
+                @include mobile
+                    font-size: 31vw
             &.started
                 opacity: 1
                 pointer-events: all
