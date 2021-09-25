@@ -263,9 +263,7 @@ section#one {
 }
 section#one .wrap {
   width: 100vmin;
-  max-width: 812px;
   height: 100vmin;
-  max-height: 812px;
   overflow: hidden;
   position: absolute;
   top: 0;
@@ -326,7 +324,6 @@ section#one .wrap #instruct {
 #fadeToWorld #innerWrap {
   background: linear-gradient(180deg, white, #261091);
   width: 100vmin;
-  max-width: 812px;
   display: block;
   margin: 0 auto;
 }
