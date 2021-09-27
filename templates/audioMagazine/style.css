@@ -309,22 +309,30 @@ section#one .wrap #instruct {
 }
 
 #halftone {
-  background-image: url(halftone.png);
+  background-image: url("whiteFadeDown.png");
+  image-rendering: pixelated;
   position: absolute;
   background-size: auto 100%;
   width: 100%;
   z-index: -1;
-  height: 36vmin;
-  background-color: white;
+  height: 256px;
+  background-color: #141313;
 }
 
 #fadeToWorld {
-  background: linear-gradient(180deg, white, #141313);
+  background-color: #141313;
+  background-image: url("whiteFadeUp.png");
+  image-rendering: pixelated;
+  background-position-x: center;
 }
 #fadeToWorld #innerWrap {
-  background: linear-gradient(180deg, white, #261091);
+  background-color: #220E8F;
+  background-image: url("whiteFadeUp.png");
+  image-rendering: pixelated;
   width: 100vmin;
+  height: 256px;
   display: block;
+  background-position-x: center;
   margin: 0 auto;
 }
 #fadeToWorld #innerWrap p {
