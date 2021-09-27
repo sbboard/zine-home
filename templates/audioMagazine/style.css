@@ -271,6 +271,18 @@ section#one .wrap {
 section#one .wrap #bg-contain {
   cursor: pointer;
 }
+section#one .wrap #bg-contain #world {
+  position: absolute;
+  right: 0;
+  z-index: 4;
+  background-color: yellow;
+  height: 100vmin;
+  width: 60vmin;
+  opacity: 1;
+}
+section#one .wrap #bg-contain #world.off {
+  opacity: 0;
+}
 section#one .wrap #bg-contain video {
   width: auto;
   height: calc(100% - 7.5vmin);
@@ -280,7 +292,7 @@ section#one .wrap #bg-contain video {
   left: 0;
   transition: left 500ms linear;
 }
-section#one .wrap img {
+section#one .wrap #avatar {
   position: absolute;
   pointer-events: none;
   bottom: 6vmin;

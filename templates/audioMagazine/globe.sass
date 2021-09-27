@@ -15,6 +15,16 @@ section#one
         top: 0
         #bg-contain
             cursor: pointer
+            #world
+                position: absolute
+                right: 0
+                z-index: 4
+                background-color: yellow
+                height: 100vmin
+                width: 60vmin
+                opacity: 1
+                &.off
+                    opacity: 0
             video
                 width: auto
                 height: calc(100% - 7.5vmin)
@@ -23,7 +33,7 @@ section#one
                 top: 0
                 left: 0
                 transition: left 500ms linear
-        img
+        #avatar
             position: absolute
             pointer-events: none
             bottom: 6vmin

@@ -47,6 +47,6 @@ videoElement.onended = () => {
   console.log("play it");
   document.getElementById("bg-contain").style.cursor = "initial";
   ended = true;
-
   document.getElementById("avatar").src = "projectOne/idle.gif";
+  document.getElementById("world").classList.remove("off");
 };
