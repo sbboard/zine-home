@@ -102,6 +102,8 @@ html body nav {
   width: calc(100% - 2em);
   bottom: -150px;
   transition: bottom 0.5s;
+  display: flex;
+  justify-content: center;
 }
 @media (max-width: 1030px) {
   html body nav {
@@ -113,13 +115,20 @@ html body nav.started {
 }
 html body nav .menu-item {
   border: 1px solid white;
-  display: inline-block;
+  display: block;
   width: 300px;
   margin-left: 1em;
   color: white;
   text-decoration: none;
-  padding: 0.5em;
   text-align: left;
+}
+html body nav .menu-item h1 {
+  font-weight: bold;
+  margin-bottom: 0.25em;
+}
+html body nav .menu-item span:first-of-type {
+  margin-bottom: 1em;
+  display: block;
 }
 @media (max-width: 1030px) {
   html body nav .menu-item {
@@ -128,13 +137,22 @@ html body nav .menu-item {
     margin-bottom: 1em;
   }
 }
-html body nav .menu-item img {
-  width: 100px;
+html body nav .menu-item .img-wrap {
+  width: 100%;
+  overflow: hidden;
   height: 100px;
-  float: left;
+  position: relative;
 }
-html body nav .menu-item div {
-  margin-left: calc(100px + .5em);
+html body nav .menu-item .img-wrap img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  margin: auto;
+  bottom: 0;
+  display: block;
+}
+html body nav .menu-item .info {
+  padding: 0.5em;
 }
 html body nav .menu-item:first-of-type {
   margin-left: 0;

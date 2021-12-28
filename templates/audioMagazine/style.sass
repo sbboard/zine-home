@@ -65,29 +65,44 @@ html
             width: calc(100% - 2em)
             bottom: -150px
             transition: bottom .5s
+            display: flex
+            justify-content: center
             @include tablet
                 position: initial
             &.started
                 bottom: 0
             .menu-item
                 border: 1px solid white
-                display: inline-block
+                display: block
                 width: 300px
                 margin-left: 1em
                 color: white
                 text-decoration: none
-                padding: .5em
                 text-align: left
+                h1
+                    font-weight: bold
+                    margin-bottom: 0.25em
+                span:first-of-type
+                    margin-bottom: 1em
+                    display: block
                 @include tablet
                     width: calc(100% - 1em)
                     margin-left: 0
                     margin-bottom: 1em
-                img
-                    width: 100px
+                .img-wrap
+                    width: 100%
+                    overflow: hidden
                     height: 100px
-                    float: left
-                div
-                    margin-left: calc(100px + .5em)
+                    position: relative
+                    img
+                        width: 100%
+                        position: absolute
+                        top: 0
+                        margin: auto
+                        bottom: 0
+                        display: block
+                .info
+                    padding: .5em
                 &:first-of-type
                     margin-left: 0
         #presentedBy
