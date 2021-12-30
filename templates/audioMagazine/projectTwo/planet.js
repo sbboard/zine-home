@@ -48,4 +48,18 @@ instrumentArray.forEach((v, i) => {
         break;
     }
   });
+
+  document.addEventListener(
+    "visibilitychange",
+    function () {
+      let imgSrc = v.children[0].src;
+      let currentIndex = imgSrc[imgSrc.length - 5];
+      if (document.hidden) {
+        sound.pause();
+      } else {
+        if (currentIndex != 0) sound.play();
+      }
+    },
+    false
+  );
 });

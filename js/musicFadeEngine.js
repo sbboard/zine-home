@@ -4,6 +4,20 @@ if (typeof window.history.replaceState == "function") {
   history.replaceState({}, "", window.location.href.slice(0, -1));
 }
 
+function resizeHome() {
+  let theCover = document.querySelector("#theCover");
+  if (window.innerWidth > 1030) {
+    let navHeight = document.querySelector("nav").offsetHeight;
+    let presentedHeight = document.querySelector("#presentedBy").offsetHeight;
+    let heightToRemove = navHeight + presentedHeight + "px";
+    theCover.style.height = `calc(100vh - ${heightToRemove})`;
+    theCover.style.padding = `${presentedHeight}px 0 ${navHeight}px 0`;
+  } else {
+    theCover.style.height = "";
+    theCover.style.padding = "";
+  }
+}
+
 function startEngine() {
   loadMusic.forEach((e) => {
     musicFade(e.location, e.mp3, e.loopPoint);
@@ -33,6 +47,7 @@ function musicFade(sceneID, mp3Source, loopTime) {
   });
 
   function checkScroll() {
+    resizeHome();
     let position = cover.getBoundingClientRect();
     if (position.top < window.innerHeight && position.bottom >= 0) {
       if (position.top > 0) {

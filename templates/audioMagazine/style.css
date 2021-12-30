@@ -206,9 +206,9 @@ html body #intro {
   transition: opacity 0.4s;
   color: white;
   pointer-events: none;
+  height: inherit;
   justify-content: center;
   display: flex;
-  height: 100vh;
   width: 100%;
   align-items: center;
   flex-direction: row;
@@ -220,9 +220,11 @@ html body #intro {
 }
 html body #intro p {
   font-size: 1.5em;
-  padding: 1em;
+  padding: 1em 0;
+  margin: 0 1em;
   width: 50%;
   max-width: 35rem;
+  background-color: black;
 }
 @media (max-width: 1030px) {
   html body #intro p {
@@ -368,7 +370,10 @@ section#one .wrap #instruct {
 #fadeToWorld #innerWrap p {
   display: block;
   font-weight: 800;
-  padding: 1em;
+  width: fit-content;
+  background-color: white;
+  padding: 0.5em;
+  margin: 0 0 2em 2em;
   color: #FF5EB9;
 }
 

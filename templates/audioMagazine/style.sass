@@ -148,9 +148,9 @@ html
             transition: opacity .4s
             color: white
             pointer-events: none
+            height: inherit
             justify-content: center
             display: flex
-            height: 100vh
             width: 100%
             align-items: center
             flex-direction: row
@@ -158,9 +158,11 @@ html
                 flex-direction: column
             p
                 font-size: 1.5em
-                padding: 1em
+                padding: 1em 0
+                margin: 0 1em
                 width: 50%
                 max-width: 35rem
+                background-color: black
                 @include tablet
                     width: 100%
                     padding: 0
